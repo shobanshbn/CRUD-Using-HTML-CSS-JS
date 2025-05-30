@@ -25,7 +25,52 @@
     <title>TODO</title>
   </head>
   <body>
-   
+   <div class="app">
+      <!-- Icon to open model and base div -->
+       <h1 class="text-center mb-3 fw-bolder">TODO'S</h1>
+
+       <div id="addnew" data-bs-toggle="modal" data-bs-target="#form">
+        <span class="fw-bolder text">Add New TODO</span>
+       <i class="fa-solid fa-square-plus fa-bounce"></i>
+       </div>
+
+       <!-- Modal changed in to form and modal change into open logic -->
+
+       <form id="form" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+         <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title fs-5 fw-bolder">Add New TODO</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+            </div>
+
+            <div class="modal-body">
+                <!-- Adding Input fields -->
+
+                <p class="fw-bolder">TODO Title</p>
+                <input type="text" id="textInput" class="form-control">
+                <br>
+
+                <p class="fw-bolder">DeadLine</p>
+                <input type="date" id="dateInput" class="form-control">
+                <br>
+                
+                <p class="fw-bolder">Task</p>
+                <textarea id="textarea" cols="30" rows="5" class="form-control"></textarea>         
+            </div>
+            <br>
+            <div id="msg"></div>
+
+            <div class="modal-footer">
+               <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+               <button type="submit" id="add" class="btn btn-warning">Save</button>
+            </div>
+
+          </div>
+         </div>
+       </form>
+   </div>
 
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
